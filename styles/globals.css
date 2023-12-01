@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .hoverEfecct {
+    @apply cursor-pointer hover:bg-gray-200 rounded-full w-[52px] lg:w-auto
+    h-[52px] lg:h-auto p-2 transition duration-500 ease-out;
+  }
+}
+@layer base {
+  body {
+    @apply text-[14px]
+  }
+}
