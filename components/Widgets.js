@@ -1,7 +1,7 @@
-import { HiOutlineSearch } from "react-icons/hi";
-import News from "./News";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { HiOutlineSearch } from "react-icons/hi";
+import News from "./News";
 
 export default function Widgets({ newsResults, randomUsersResults }) {
   const [articleNum, setArticleNum] = useState(3);
@@ -20,7 +20,7 @@ export default function Widgets({ newsResults, randomUsersResults }) {
         </div>
       </div>
       <div className="text-gray-700 space-y-3 bg-gray-100 rounded-xl pt-2 w-[90%] xl:w-[75%]">
-        <h4 className="font-bold text-xl px-4 pb-4">What's Happening</h4>
+        <h4 className="font-bold text-xl px-4 pb-4">Whats Happening</h4>
         <AnimatePresence>
           {newsResults.slice(0, articleNum).map((article) => (
             <motion.div
@@ -56,12 +56,14 @@ export default function Widgets({ newsResults, randomUsersResults }) {
                 key={randomUser.login.username}
                 className="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-300/70 transition duration-500 ease-out"
               >
-                <img
-                  className="rounded-full"
-                  width={40}
-                  src={randomUser.picture.thumbnail}
-                  alt="imagen user random"
-                />
+                <picture>
+                  <img
+                    className="rounded-full"
+                    width={40}
+                    src={randomUser.picture.thumbnail}
+                    alt="imagen user random"
+                  />
+                </picture>
                 <div className="truncate ml-3 leading-5">
                   <h4 className="font-bold hover:underline text-[14px] truncate">
                     {randomUser.login.username}

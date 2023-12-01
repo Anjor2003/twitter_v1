@@ -1,6 +1,6 @@
 export default function News({ article }) {
   return (
-    <a href={article.url} target="_blank">
+    <a rel="noreferrer" href={article.url} target="_blank">
       <div className="flex flex-col items-start justify-between py-2 px-6 space-x-1 hover:bg-gray-300 transition duration-500 ease-out">
         <div className="space-y-0.5 mb-2">
           <h6 className="text-sm font-semibold">{article.title}</h6>
