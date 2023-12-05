@@ -36,7 +36,7 @@ export default function PostPage({ newsResults, randomUsersResults }) {
       ),
       (snapshot) => setComments(snapshot.docs)
     );
-  }, [db, id]);
+  }, [id]);
 
   return (
     <main className="flex min-h-screen mx-auto">
